@@ -1,0 +1,22 @@
+{:duct.profile/base
+ {:duct.core/project-ns {{name}}
+
+  :{{name}}.resolver.hello/get-world {}}
+
+ :duct.profile/dev   #duct/include "dev"
+ :duct.profile/local #duct/include "local"
+ :duct.profile/prod  {}
+
+ :duct.module/logging {}
+
+ :duct.module/lacinia
+ {:graphiql {:endpoint "/graphiql"}
+  :middleware []
+  :schema {:objects
+           {:hello
+            {:fields {:msg {:type String}}}}
+
+           :queries
+           {:world {:type :hello
+                    :args {:name {:type String :default-value "World"}}
+                    :resolve :hello/get-world}}}}}
