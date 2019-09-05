@@ -1,4 +1,4 @@
-(defproject duct-lacinia/lein-template "0.1.2-SNAPSHOT"
+(defproject duct-lacinia/lein-template "0.1.2"
   :description "Leiningen template for creating apps with duct-lacinia"
   :url "https://github.com/kakao/duct-lacinia-template"
   :license {:name "Apache 2 License"
