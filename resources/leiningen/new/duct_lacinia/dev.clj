@@ -14,7 +14,7 @@
 (duct/load-hierarchy)
 
 (defn read-config []
-  (duct/read-config (io/resource "{{name}}/config.edn")))
+  (duct/read-config (io/resource "{{sanitized}}/config.edn")))
 
 (defn test []
   (eftest/run-tests (eftest/find-tests "test")))
